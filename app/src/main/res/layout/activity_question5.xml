@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLb"
+    tools:context=".question5">
+
+    /* This is the fifth question "The hammer and sickle is one of
+    the most recognisable symbols of which political ideology?" */
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oleo_script_bold"
+        android:text="The hammer and sickle is one of the most recognisable symbols of which political ideology?"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.306" />
+
+    /* This is radiogroup for the fifth question  */
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.468"
+        tools:layout_editor_absoluteX="160dp"
+        android:textStyle="bold">
+
+    /* This is the Communism select option on the fifth question  */
+        <RadioButton
+            android:id="@+id/radio_Communism"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Communism"
+            android:textColor="@color/colorBlack"
+            android:buttonTint="@color/colorBlack"
+            android:textStyle="bold"/>
+
+    /* This is the Republicanism select option on the fifth question  */
+        <RadioButton
+            android:id="@+id/radio_Republicanism"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Republicanism"
+            android:textColor="@color/colorBlack"
+            android:buttonTint="@color/colorBlack"
+            android:textStyle="bold"/>
+
+    /* This is the Liberalism select option on the fifth question  */
+        <RadioButton
+            android:id="@+id/radio_Liberalism"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Liberalism"
+            android:textColor="@color/colorBlack"
+            android:buttonTint="@color/colorBlack"
+            android:textStyle="bold"/>
+
+    /* This is the Conservatism select option on the fifth question  */
+        <RadioButton
+            android:id="@+id/radio_Conservatism"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Conservatism"
+            android:textColor="@color/colorBlack"
+            android:buttonTint="@color/colorBlack"
+            android:textStyle="bold"/>
+
+    </RadioGroup>
+
+    /* This is Button that holds the value that the user has earned until now  */
+    <Button
+        android:id="@+id/prize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/step_activ"
+        android:padding="10dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:enabled="true"
+        android:text="@string/money_5" />
+
+    /* This is confirm button when the user answers the question it either goes to the next
+    question or ends the game, depending whether or not the user answered the question correctly */
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:background="@android:color/holo_blue_light"
+        android:onClick="goto_next_question"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

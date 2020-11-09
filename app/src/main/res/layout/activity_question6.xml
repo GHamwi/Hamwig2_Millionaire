@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context=".question6">
+
+    /* This is the sixth question "Which toys have been marketed with the phrase “robots in disguise ?" */
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/new_rocker"
+        android:text="Which toys have been marketed with the phrase “robots in disguise ?"
+        android:textAlignment="center"
+        android:textColor="@color/colorYellow"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.306" />
+
+    /* This is radiogroup for the sixth question  */
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:textColor="@color/colorYellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.468"
+        tools:layout_editor_absoluteX="160dp" >
+
+    /* This is the Bratz Dolls select option on the sixth question  */
+        <RadioButton
+            android:id="@+id/radio_Bratz_Dolls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Bratz Dolls"
+            android:textColor="@color/colorYellow"
+            android:buttonTint="@color/colorYellow"
+            android:textStyle="bold"/>
+
+    /* This is the Transformers select option on the sixth question  */
+        <RadioButton
+            android:id="@+id/radio_Transformers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Transformers"
+            android:textColor="@color/colorYellow"
+            android:buttonTint="@color/colorYellow"
+            android:textStyle="bold"/>
+
+    /* This is the Sylvanian Families select option on the sixth question  */
+        <RadioButton
+            android:id="@+id/radio_Sylvanian_Families"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Sylvanian Families"
+            android:textColor="@color/colorYellow"
+            android:buttonTint="@color/colorYellow"
+            android:textStyle="bold"/>
+
+    /* This is the Hatchimals select option on the sixth question  */
+        <RadioButton
+            android:id="@+id/radio_Hatchimals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Hatchimals"
+            android:textColor="@color/colorYellow"
+            android:buttonTint="@color/colorYellow"
+            android:textStyle="bold"/>
+
+    </RadioGroup>
+
+    /* This is Button that holds the value that the user has earned until now  */
+    <Button
+        android:id="@+id/prize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/step_activ"
+        android:padding="10dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:enabled="true"
+        android:text="@string/money_6" />
+
+    /* This is confirm button when the user answers the question it either goes to the next
+    question or ends the game, depending whether or not the user answered the question correctly */
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:background="@android:color/holo_blue_light"
+        android:onClick="goto_next_question"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

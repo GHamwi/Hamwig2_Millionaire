@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorRed"
+    tools:context=".question3">
+
+    /* This is the third question "What name is given to the revolving belt machinery
+    in an airport that delivers checked luggage from the plane to baggage reclaim?" */
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arbutus"
+        android:text="What name is given to the revolving belt machinery in an airport that delivers checked luggage from the plane to baggage reclaim?"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.344" />
+
+    /* This is radiogroup for the third question */
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.076">
+
+        /* This is the Carousel select option on the third question */
+
+        <RadioButton
+            android:id="@+id/radio_Carousel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorWhite"
+            android:onClick="onRadioButtonClicked"
+            android:text="Carousel"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        /* This is the Hangar select option on the third question */
+
+        <RadioButton
+            android:id="@+id/radio_Hangar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorWhite"
+            android:onClick="onRadioButtonClicked"
+            android:text="Hangar"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        /* This is the Terminal select option on the third question */
+
+        <RadioButton
+            android:id="@+id/radio_Terminal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorWhite"
+            android:onClick="onRadioButtonClicked"
+            android:text="Terminal"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        /* This is the Concourse select option on the third question */
+
+        <RadioButton
+            android:id="@+id/radio_Concourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorWhite"
+            android:onClick="onRadioButtonClicked"
+            android:text="Concourse"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    /* This is Button that holds the value that the user has earned until now */
+    <Button
+        android:id="@+id/prize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/step_activ"
+        android:enabled="true"
+        android:padding="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/money_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    /* This is confirm button when the user answers the question it either goes to the next
+    question or ends the game, depending whether or not the user answered the question correctly */
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:background="@android:color/holo_blue_light"
+        android:onClick="goto_next_question"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
